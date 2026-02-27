@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job & Result Portal</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body{
+  background:#f3f4f6;
+  color:#111827;
+}
+
+/* Header */
+header{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+}
+
+header h1{
+  font-size:26px;
+}
+
+header p{
+  font-size:14px;
+  opacity:0.9;
+}
+
+/* Navigation */
+nav{
+  background:#111827;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:12px 18px;
+  font-size:14px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:#2563eb;
+}
+
+/* Sections */
+section{
+  max-width:1100px;
+  margin:25px auto;
+  padding:20px;
+  background:white;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+section h2{
+  margin-bottom:15px;
+  padding-left:10px;
+  border-left:5px solid #2563eb;
+  font-size:20px;
+}
+
+/* Table */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td{
+  padding:10px;
+  border-bottom:1px solid #ddd;
+  font-size:14px;
+  text-align:left;
+}
+
+th{
+  background:#2563eb;
+  color:white;
+}
+
+tr:hover{
+  background:#f1f5f9;
+}
+
+.btn{
+  padding:5px 10px;
+  background:#2563eb;
+  color:white;
+  text-decoration:none;
+  border-radius:4px;
+  font-size:12px;
+}
+
+.btn:hover{
+  background:#1e40af;
+}
+
+/* Mobile Responsive Table */
+@media(max-width:768px){
+
+  table, thead, tbody, th, td, tr{
+    display:block;
+    width:100%;
+  }
+
+  thead{
+    display:none;
+  }
+
+  tr{
+    margin-bottom:15px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    background:#fff;
+  }
+
+  td{
+    border:none;
+    padding:6px 0;
+  }
+
+  td::before{
+    content:attr(data-label);
+    font-weight:bold;
+    display:block;
+    margin-bottom:3px;
+    color:#2563eb;
+  }
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  background:#111827;
+  color:white;
+  margin-top:30px;
+  font-size:13px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fast Job & Result Update</h1>
+  <p>Latest Government Jobs, Results, Answer Keys & Admit Cards</p>
+</header>
+
+<nav>
+  <a href="#result">Result</a>
+  <a href="#jobs">Latest Jobs</a>
+  <a href="#answerkey">Answer Key</a>
+  <a href="#admit">Admit Cards</a>
+</nav>
+
+<section id="result">
+  <h2>Result</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Exam Name</th>
+        <th>Post</th>
+        <th>Date</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Exam Name">Exam Name</td>
+        <td data-label="Post">Post Name</td>
+        <td data-label="Date">DD/MM/YYYY</td>
+        <td data-label="Link"><a href="#" class="btn">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="jobs">
+  <h2>Latest Jobs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Organization</th>
+        <th>Post</th>
+        <th>Last Date</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Organization">Organization Name</td>
+        <td data-label="Post">Job Post</td>
+        <td data-label="Last Date">DD/MM/YYYY</td>
+        <td data-label="Apply"><a href="#" class="btn">Apply</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="answerkey">
+  <h2>Answer Key</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Exam</th>
+        <th>Release Date</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Exam">Exam Name</td>
+        <td data-label="Release Date">DD/MM/YYYY</td>
+        <td data-label="Download"><a href="#" class="btn">Download</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="admit">
+  <h2>Admit Cards</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Exam</th>
+        <th>Exam Date</th>
+        <th>Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Exam">Exam Name</td>
+        <td data-label="Exam Date">DD/MM/YYYY</td>
+        <td data-label="Download"><a href="#" class="btn">Download</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  © 2026 Fast Job Update | All Rights Reserved
+</footer>
+
+</body>
+</html>
